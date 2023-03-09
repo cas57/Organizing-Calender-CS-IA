@@ -12,7 +12,7 @@ const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 //variable to clear to input out
 const eventTitleInput = document.getElementById('eventTitleInput');
-//create an array for the days of the week
+//create an array to determine the amount of padding days necessary in the days of the week
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 //func to show the modal whenever user clicks
@@ -32,9 +32,9 @@ function openModal(date) {
 }
 
 function load() {
-//constant set to the current month 
+    //constant set to the current month 
     const dt = new Date ();
-//func so that you can move around and view other months
+    //func so that you can move around and view other months
     if (nav !== 0) {
         dt.setMonth(new Date().getMonth() + nav);
 
@@ -46,7 +46,7 @@ function load() {
     const year = dt.getFullYear();
 
 
-//rule so the programming knows how many boxs to put for the days in the month
+    //rule so the programming knows how many boxs to put for the days in the month
     const firstDayOfMonth = new Date(year, month, 1);
     //calling getDate converts to string and gets the specific information/day of the month
     const daysInMonth = new Date (year, month + 1, 0).getDate();
@@ -63,8 +63,7 @@ function load() {
     document.getElementById('monthDisplay').innerText = 
         `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`; 
 
- //func to wipe the prior calendar setup and reset it so that the forloop can recreate it for the next month
- calendar.innerHTML = '';
+
 
     for(let i = 1; i <= paddingDays + daysInMonth; i++) {
         const daySquare = document.createElement('div');
