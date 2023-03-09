@@ -61,9 +61,9 @@ function load() {
 
     //calling for the current/relevant month name
     document.getElementById('monthDisplay').innerText = 
-        `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`; 
+        `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
-
+    calendar.innerHTML = '';
 
     for(let i = 1; i <= paddingDays + daysInMonth; i++) {
         const daySquare = document.createElement('div');
