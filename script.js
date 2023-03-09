@@ -87,7 +87,7 @@ function load() {
                 daySquare.appendChild(eventDiv);
             }
 
-            daySquare.addEventsListener('click', () => openModal(dayString));
+            daySquare.addEventListener('click', () => openModal(dayString));
         } else {
             daySquare.classList.add('padding');
         }
