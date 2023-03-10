@@ -2,9 +2,9 @@ let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : []
 
-const product = document.getElementById('product');
+const calendar = document.getElementById('calendar');
 //declare the eventModal so its visible
-const newDeadlineModal = document.getElementById('newDeadlineModal');
+const newEventModal = document.getElementById('newEventModal');
 //func for deleting the modal
 const deleteEventModal = document.getElementById('deleteEventModal');
 //create another const for the backdrop
@@ -20,7 +20,7 @@ function openModal(date) { clicked = date;
     if (eventForDay) {
         document.getElementById('eventText').innerText = eventForDay.title; deleteEventModal.style.display = 'block';
     } else {
-        newDeadlineModal.style.display = 'block';
+        newEventModal.style.display = 'block';
     }
     backDrop.style.display = 'block';
 }
@@ -54,7 +54,7 @@ const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 //calling for the current/relevant month name
 document.getElementById('monthDisplay').innerText = `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
-product.innerHTML = '';
+calendar.innerHTML = '';
 
 for(let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement('div'); 
@@ -90,7 +90,7 @@ for(let i = 1; i <= paddingDays + daysInMonth; i++) {
 //func for the cancel button
 function closeModal () {
  eventTitleInput.classList.remove('error'); 
- newDeadlineModal.style.display = 'none'; 
+ newEventModal.style.display = 'none'; 
  deleteEventModal.style.display = 'none'; 
  backDrop.style.display = 'none'; 
  eventTitleInput.value = '';
