@@ -82,7 +82,7 @@ for(let i = 1; i <= paddingDays + daysInMonth; i++) {
         daySquare.classList.add('padding'); 
     }
     
-    product.appendChild(daySquare); 
+    calendar.appendChild(daySquare); 
    }
 }
 
