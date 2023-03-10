@@ -2,7 +2,7 @@ body {
     display: flex;
     margin-top: 50px;
     justify-content: center;
-    background-color: #FFFCFF;
+    background-color: #687f6a;
   }
   button {
     width: 75px;
@@ -17,9 +17,9 @@ body {
   
   #header {
     padding: 10px;
-    color: #2e5d3a;
+    color: #566a58;
     font-size: 26px;
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: space-between;
   }
@@ -32,7 +32,7 @@ body {
   #daysintheweek {
     width: 100%;
     display: flex;
-    color: #0b4d69;
+    color: #566a58;
   }
   #aysintheweek div {
     width: 100px;
@@ -89,7 +89,7 @@ body {
     top: 100px;
     left: calc(50% - 175px);
     position: absolute;
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
   #eventInput {
     padding: 10px;
@@ -105,10 +105,10 @@ body {
     border: 2px solid red;
   }
   #cancelButton, #deleteButton {
-    background-color: #8c3a3a;
+    background-color: #ba424e;
   }
   #saveButton, #closeButton {
-    background-color: #3d7a4e;
+    background-color: #49ad65;
   }
   #eventText {
     font-size: 14px;
