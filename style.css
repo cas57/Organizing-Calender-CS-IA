@@ -19,7 +19,7 @@ body {
     padding: 10px;
     color: #566a58;
     font-size: 26px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     display: flex;
     justify-content: space-between;
   }
@@ -89,7 +89,7 @@ body {
     top: 100px;
     left: calc(50% - 175px);
     position: absolute;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
   }
   #eventInput {
     padding: 10px;
