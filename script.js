@@ -11,9 +11,9 @@ const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 //variable to clear to input out
 const eventTitleInput = document.getElementById('eventTitleInput');
+//create an array to determine the amount of padding days necessary in the days of the week 
+const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-
-//create an array to determine the amount of padding days necessary in the days of the week const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 //func to show the modal whenever user clicks
 function openModal(date) { clicked = date;
     const eventForDay = events.find(e => e.date === clicked);
